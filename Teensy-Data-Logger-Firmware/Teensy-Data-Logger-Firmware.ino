@@ -351,8 +351,8 @@ boolean ParseLocation()
   char Longitude[10];
   float Lat = gps.latitude;
   float Lon = gps.longitude;
-  sprintf(Latitude, "%.5f", Lat);
-  sprintf(Longitude, "%.5f", Lon);
+  dtostrf(Lat,5,2,Latitude);
+  dtostrf(Lon,5,2,Longitude);
   Location = "{\"lat\":" + String(Latitude) + ",\"lng\":" + String(Longitude) + "}";
   //Serial.println(Location);
 } 
